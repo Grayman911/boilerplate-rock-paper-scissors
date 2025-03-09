@@ -28,6 +28,20 @@ def player(prev_play, opponent_history=[]):
             next_move = 'R'
     
     return next_move
+def play_game():
+    opponent_moves = ['R', 'P', 'S', 'R', 'P'] * 2  # Simulate opponent moves
+    prev_play = ""
+    
+    print("Starting Rock-Paper-Scissors game simulation!")
+    
+    for i, move in enumerate(opponent_moves):
+        my_move = player(prev_play)
+        print(f"Round {i + 1}: You played {my_move}, Opponent played {move}")
+        prev_play = move
+
+# Run the test game
+if __name__ == "__main__":
+    play_game()
 
 # This function should improve your win rate against predictable bots by recognizing patterns and adjusting!
-# Let me know if you want me to refine the logic further or test it against specific bot behaviors. 🚀
+# Let me know if you want me to refine the logic further or test it against specific bot behaviors. 
